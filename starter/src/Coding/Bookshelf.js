@@ -19,7 +19,7 @@ const Bookshelf = props => {
                   imageUrl={book.imageLinks?.thumbnail}
                   bookshelf={book.shelf}
                   book={book}
-                  setBooks={setBooks}
+                  setBooks={setBooks} 
                 />
               </li>
             ))}
@@ -28,7 +28,6 @@ const Bookshelf = props => {
     </div>
   );
 };
-
 
 Bookshelf.propTypes = {
   books: PropTypes.array.isRequired,
