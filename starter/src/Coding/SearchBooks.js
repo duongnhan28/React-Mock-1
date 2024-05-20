@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import Book from "./Book";
 import * as BooksAPI from "../BooksAPI";
 
-const Search = () => {
+const Search = ({ setBooks }) => {
   const [searchText, setSearchText] = useState("");
   const [searched, setSearched] = useState([]);
   const history = useHistory();
@@ -63,6 +63,7 @@ const Search = () => {
               imageUrl={book.imageLinks && book.imageLinks.thumbnail}
               bookshelf={book.shelf}
               book={book}
+              setBooks={setBooks} 
               isSearch
             />
           ))}

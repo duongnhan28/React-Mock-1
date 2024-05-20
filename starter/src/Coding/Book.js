@@ -7,7 +7,7 @@ const Book = ({
   authors,
   imageUrl,
   book,
-  setBooks,
+  setBooks, // Đảm bảo prop setBooks được chuyển xuống từ component cha
   isSearch,
   bookshelf
 }) => {
@@ -73,9 +73,9 @@ const Book = ({
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   authors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string, 
   book: PropTypes.object.isRequired,
-  setBooks: PropTypes.func.isRequired,
+  setBooks: PropTypes.func, 
   isSearch: PropTypes.bool,
   bookshelf: PropTypes.string.isRequired
 };
