@@ -44,7 +44,7 @@ const App = () => {
           </div>
         </div>
         <div className="open-search">
-          <a onClick={() => history.push("/search")}>Add a book</a>
+          <button onClick={() => history.push("/search")}>Add a book</button>
         </div>
       </div>
     </div>

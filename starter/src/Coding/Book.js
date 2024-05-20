@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; 
 import * as BooksAPI from "../BooksAPI";
 
 const Book = ({
@@ -67,6 +68,16 @@ const Book = ({
       </div>
     </div>
   );
+};
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  authors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  book: PropTypes.object.isRequired,
+  setBooks: PropTypes.func.isRequired,
+  isSearch: PropTypes.bool,
+  bookshelf: PropTypes.string.isRequired
 };
 
 export default Book;
